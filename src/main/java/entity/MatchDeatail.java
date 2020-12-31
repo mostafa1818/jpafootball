@@ -33,19 +33,6 @@ public class MatchDeatail {
 
 
 
-//    @OneToOne(targetEntity = Team.class ,cascade = CascadeType.ALL)
-//    @JoinColumn(name = "fk_homeTeam", referencedColumnName = "id")
-//    private Team homeTeam;
-//
-//    @OneToOne(targetEntity = Team.class,cascade =CascadeType.ALL)
-//    @JoinColumn(name = "fk_awayTeam", referencedColumnName = "id")
-//    private int awayTeam;
-//
-//
-//    @ManyToOne(targetEntity = Staduim.class ,cascade =CascadeType.ALL)
-//    @JoinColumn(name = "fk_stadium", referencedColumnName = "id")
-//    private  Staduim staduim;
-
 
     public int getId() {
         return id;

@@ -20,9 +20,7 @@ public class Team {
     @Column
     private int coachId;
 
-//     @ManyToOne(cascade = CascadeType.ALL)
-//
-//    private City city;
+
 
     @ManyToOne(targetEntity = City.class,cascade = CascadeType.REMOVE )
     @JoinColumn(name = "fk_City" )

@@ -31,14 +31,6 @@ public class User {
 
 
 
-///////////////////////////////////////////////
-//    @OneToMany(mappedBy = "student")
-//    private Set<Address> addressSet;
-//
-//    @ManyToMany(cascade =  CascadeType.ALL)
-//    @JoinTable(name = "Stu_Pro", joinColumns =@JoinColumn (name = "fk_Stu_ID"),
-//            inverseJoinColumns =@JoinColumn(name = "FK_Tec_ID"))
-//    private Set<Teacher> teacherSet;
 
 
     public int getId() {
