@@ -11,7 +11,7 @@ import java.util.Set;
 public class MatchDeatail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column
     private Date year;
@@ -19,18 +19,24 @@ public class MatchDeatail {
     @Column
     private Date date;
 
+    @Column
+    private Integer season;
 
 
-    @OneToOne(targetEntity = Team.class ,cascade = CascadeType.ALL)
+
+    @ManyToOne(targetEntity = Team.class ,cascade = CascadeType.ALL)
     private Team homeTeam;
 
-    @OneToOne(targetEntity = Team.class,cascade =CascadeType.ALL)
+    @ManyToOne(targetEntity = Team.class,cascade =CascadeType.ALL)
     private Team awayTeam;
 
 
     @ManyToOne(targetEntity = Staduim.class ,cascade =CascadeType.ALL)
     private  Staduim staduim;
 
+    @ManyToOne(targetEntity = Score.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_score", referencedColumnName = "id")
+    private  Score score;
 
 
 

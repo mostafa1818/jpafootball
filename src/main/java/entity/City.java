@@ -10,7 +10,7 @@ import java.util.Set;
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column
     private String name;

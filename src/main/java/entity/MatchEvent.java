@@ -9,7 +9,7 @@ import java.util.Date;
 public class MatchEvent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column
     private String type;
@@ -20,7 +20,7 @@ public class MatchEvent {
 //    @OneToOne(cascade = CascadeType.ALL)
 //    private MatchDeatail matchId;
 
-    @OneToOne(targetEntity = MatchDeatail.class,cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = MatchDeatail.class,cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_matchId", referencedColumnName = "id")
     private MatchDeatail matchId;
 

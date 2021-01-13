@@ -11,7 +11,7 @@ import java.util.Set;
 public class Contract {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column
     private Date year;
@@ -22,17 +22,24 @@ public class Contract {
     @Column
     private Double salary;
 
-    @OneToOne(targetEntity = Team.class,cascade = CascadeType.ALL)
+
+    @Column
+    private Integer season;
+
+    @ManyToOne(targetEntity = Team.class,cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_Team", referencedColumnName = "id")
     private Team team;
 //    @OneToOne( cascade = CascadeType.ALL)
 //    private Team team;
 
-    @OneToOne(targetEntity = User.class,cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = User.class,cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_User", referencedColumnName = "id")
     private User user;
-//    @OneToOne( cascade = CascadeType.ALL)
-//    private User user;
+
+
+
+
+
 
 
     public int getId() {

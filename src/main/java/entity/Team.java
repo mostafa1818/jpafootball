@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Team {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column
     private String name;
@@ -18,7 +18,7 @@ public class Team {
     private String code;
 
     @Column
-    private int coachId;
+    private Integer coachId;
 
 
 

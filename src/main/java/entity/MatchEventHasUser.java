@@ -12,11 +12,11 @@ public class MatchEventHasUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int id;
+    private Integer id;
 
 
 
-    @OneToOne( cascade = CascadeType.ALL)
+    @ManyToOne( cascade = CascadeType.ALL)
     @JoinColumn(name="FK_matchEvent")
     @OrderColumn(name="type")
     //  @JoinColumn(name = "fk_matchEvent", referencedColumnName = "id")
