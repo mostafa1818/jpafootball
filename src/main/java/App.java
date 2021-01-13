@@ -53,11 +53,19 @@ public class App {
         initializeDao(entityManager);
         entityManager.getTransaction().begin();
          if (teamDao.load(CHECK_TEAM_ID) == null)
-         {initializeData();}
+         {
+             initializeData();
+         }
 
-         deleteData();
-         updateData();
-        entityManager.flush();
+
+     //    deleteData();
+      //   updateData();
+      //  entityManager.flush();
+
+        Practise practise= new Practise();
+     //   practise.maxSalary(entityManager);
+       practise.listPlayer(entityManager);
+       // practise.listCity(entityManager);
         showData();
 
         entityManager.getTransaction().commit();
